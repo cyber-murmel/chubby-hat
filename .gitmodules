@@ -1,0 +1,3 @@
+[submodule "hardware/chubby hat/src/subsch"]
+	path = hardware/chubby hat/src/subsch
+	url = https://github.com/cyber-murmel/subsch.git
