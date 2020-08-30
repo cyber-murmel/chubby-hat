@@ -1,6 +1,8 @@
 # Chubby Hat
 A PCB that turns the Colorlight 5A-75B into an easy to use development platform for cheap.
 
+<img src="assets/v1.0_no_Pmod.jpg" width="75%">
+
 ## Features
 * JTAG
   * USB to JTAG (STM32 or FTDI based)
