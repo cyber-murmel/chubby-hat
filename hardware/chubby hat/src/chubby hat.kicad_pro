@@ -348,14 +348,14 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "/tmp/",
+    "plot_directory": "../plot/pdf/",
     "spice_adjust_passive_values": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
   "sheets": [
     [
-      "4033a3ff-cacb-4841-9597-c53a40924edc",
+      "de982e40-c183-4790-a47f-3ec1be50540f",
       ""
     ],
     [
