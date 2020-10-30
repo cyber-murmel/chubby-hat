@@ -1,3 +1,5 @@
+View this project on [CADLAB.io](https://cadlab.io/project/23467). 
+
 # Chubby Hat
 A PCB that turns the [Colorlight 5A-75B](https://www.aliexpress.com/item/32728519290.html) into an easy to use development platform for cheap.
 This project ist based on [q3k/chubby75](https://github.com/q3k/chubby75/tree/master/5a-75b).
