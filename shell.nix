@@ -1,8 +1,10 @@
 {
-  pkgs ? import (fetchTarball {
-    # nixos-21.11 as of 2021-04-03
-    url = https://github.com/NixOS/nixpkgs/archive/fd3e33d696b81e76b30160dfad2efb7ac1f19879.tar.gz;
-    sha256 = "1liw3glyv1cx0bxgxnq2yjp0ismg0np2ycg72rqghv75qb73zf9h";
+  pkgs ? import (fetchGit {
+    name = "nixos-21.11-2022-05-17";
+    url = "https://github.com/nixos/nixpkgs/";
+    ref = "refs/heads/nixos-21.11";
+    # `git ls-remote https://github.com/nixos/nixpkgs nixos-21.11`
+    rev = "8b3398bc7587ebb79f93dfeea1b8c574d3c6dba1";
   }) {}
 }:
 
