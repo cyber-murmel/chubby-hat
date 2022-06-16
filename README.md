@@ -20,6 +20,6 @@ PROJECT_NAME=my-cool-project
 rename kicad-template $PROJECT_NAME source/*.kicad_*
 sed -i -e "s/kicad-template/$PROJECT_NAME/g" source/*.kicad_*
 
-git commit -m "renamed source files"
+git commit -am "renamed source files"
 ```
 
