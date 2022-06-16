@@ -47,7 +47,7 @@
 
 	    <!-- main part -->
 	<xsl:template match="/export">
-	    <xsl:text>Comment,Designator,Footprint,LCSC</xsl:text>
+	    <xsl:text>Comment,Quantity,Designator,Footprint,LCSC</xsl:text>
 	    <!-- all table entries -->
 	    <xsl:apply-templates select="components"/>
 	</xsl:template>
@@ -58,6 +58,7 @@
 		<xsl:sort select="@ref" />
 		<xsl:text>&nl;</xsl:text>
 		<xsl:text>"</xsl:text><xsl:value-of select="value"/><xsl:text>","</xsl:text>
+		<xsl:value-of select="count(key('partTypeByValueAndFootprint', concat(footprint, '-', value)))"/><xsl:text>","</xsl:text>
 		<!-- list of all references -->
 		<xsl:for-each select="key('partTypeByValueAndFootprint', concat(footprint, '-', value))">
 			<!-- strip non-digits from reference and sort based on remaining number -->
