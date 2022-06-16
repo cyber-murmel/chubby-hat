@@ -10,3 +10,12 @@ For KiCad *Version: 5.99.0-76a6177eb7, release build*
 | datasheets | component datasheets                                                 |
 | assets     | board setups, component 3D models, logos, board 3D renderings        |
 | scripts    | BOM export plugins, miscellaneous helper scripts for file conversion |
+
+## Usage
+Click [![Use this template](https://img.shields.io/badge/-Use_this_template-green.svg)](https://github.com/cyber-murmel/kicad-template/generate) to create a new repository and clone it to your machine. Then enter the repository and rename the source files.
+
+```shell
+rename kicad-template my-cool-project source/*
+git commit -m "renamed source files"
+```
+
