@@ -15,7 +15,11 @@ For KiCad *Version: 5.99.0-76a6177eb7, release build*
 Click [![Use this template](https://img.shields.io/badge/-Use_this_template-green.svg)](https://github.com/cyber-murmel/kicad-template/generate) to create a new repository and clone it to your machine. Then enter the repository and rename the source files.
 
 ```shell
-rename kicad-template my-cool-project source/*
+PROJECT_NAME=my-cool-project
+
+rename kicad-template $PROJECT_NAME source/*.kicad_*
+sed -i -e "s/kicad-template/$PROJECT_NAME/g" source/*.kicad_*
+
 git commit -m "renamed source files"
 ```
 
