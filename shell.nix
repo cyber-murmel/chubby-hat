@@ -1,16 +1,15 @@
-{
-  pkgs ? import (fetchGit {
-    name = "nixos-21.11-2022-05-17";
-    url = "https://github.com/nixos/nixpkgs/";
-    ref = "refs/heads/nixos-21.11";
-    # `git ls-remote https://github.com/nixos/nixpkgs nixos-21.11`
-    rev = "8b3398bc7587ebb79f93dfeea1b8c574d3c6dba1";
-  }) {}
+{ pkgs ? import
+    (builtins.fetchGit {
+      name = "nixos-22.05-2022_08_27";
+      url = "https://github.com/nixos/nixpkgs/";
+      ref = "refs/heads/nixos-22.05";
+      rev = "b47d4447dc2ba34f793436e6631fbdd56b12934a";
+    })
+    { }
 }:
-
 with pkgs;
 let
-  custom_kicad = { kicadVersion, rev, sha256 } : kicad-unstable.override {
+  custom_kicad = { kicadVersion, rev, sha256 }: kicad-unstable.override {
     srcs = {
       inherit kicadVersion;
       kicad = fetchFromGitLab {
@@ -21,22 +20,16 @@ let
       };
     };
   };
-  kicad-6_0_5 = custom_kicad {
-    kicadVersion = "6.0.5";
-    rev = "a6ca702e916df70e499615d8613102e780e96a40";
-    sha256 = "19mg672h1gjdvnkp13cpkhk67xpwms72y4gd6g8983fcsxr8nq23";
-  };
-  kicad-5_99_0 = custom_kicad {
-    kicadVersion = "5.99.0";
-    rev = "9a795c1333ba09f176d6ca290bc9f08d08f033e1";
-    sha256 = "0clv96vvzil1a33g6x8flhwqd57g0a1a9jjzgpjwyxjh3wvnnnyi";
+  kicad-6_0_7 = custom_kicad {
+    kicadVersion = "6.0.7";
+    rev = "f9a2dced07acac97c62eef0931269fea6bcfb828";
+    sha256 = "10bqn99nif9zyi5v0lkic3na2vac5lgacw01ayil359vaw7d0pzy";
   };
 in
 mkShell {
   buildInputs = [
-    #kicad # stable upstream
-    #kicad-5_99_0
-    kicad-6_0_5
+    # kicad-6_0_7
+    kicad # 6.0.5
     zip
   ];
 }

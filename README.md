@@ -1,5 +1,5 @@
 # KiCad Template
-For KiCad *Version: 5.99.0-76a6177eb7, release build*
+For KiCad *Version: 6.0.5, release build*
 
 ## Directory Structure
 | directory  | content                                                              |
