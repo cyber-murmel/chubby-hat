@@ -332,7 +332,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "unannotated": "error",
@@ -423,6 +423,17 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
-  "text_variables": {}
+  "sheets": [
+    [
+      "5477044b-5ae5-4ed6-bb7d-f5f3cc95a2d4",
+      ""
+    ]
+  ],
+  "text_variables": {
+    "author": "Author Name",
+    "company": "Company Name",
+    "pid": "project id",
+    "revision": "0.1.0",
+    "title": "Project Name"
+  }
 }
