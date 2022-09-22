@@ -6,9 +6,9 @@ For KiCad *Version: 6.0.5, release build*
 |------------|----------------------------------------------------------------------|
 | source     | KiCad source files                                                   |
 | production | fabrication files (Gerber, BOM, placement)                           |
-| exports    | schematic and layout plots, board 3D model                           |
+| exports    | schematic and layout plots, board 3D model and renderings            |
 | datasheets | component datasheets                                                 |
-| assets     | board setups, component 3D models, logos, board 3D renderings        |
+| assets     | board setups, component 3D models, logos                             |
 | scripts    | BOM export plugins, miscellaneous helper scripts for file conversion |
 
 ## Usage
