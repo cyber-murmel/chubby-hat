@@ -1,5 +1,5 @@
 # KiCad Template
-For KiCad *Version: 6.0.5, release build*
+For KiCad *Version: 6.0.9, release build*
 
 [TL;DR](README.md#tldr)
 
