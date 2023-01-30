@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "Module_Project")(type "KiCad")(uri "/home/marble/repos/chubby-hat/library/Module.pretty")(options "")(descr ""))
+  (lib (name "Connector_USB_Project")(type "KiCad")(uri "/home/marble/repos/chubby-hat/library/Connector_USB.pretty")(options "")(descr ""))
+)

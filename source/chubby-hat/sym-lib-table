@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "MCU_Module_Project")(type "KiCad")(uri "/home/marble/repos/chubby-hat/library/MCU_Module.kicad_sym")(options "")(descr ""))
+)
