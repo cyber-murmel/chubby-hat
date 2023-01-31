@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "6.0.9"
     },
-    "CreationDate": "2023-01-30T01:57:01+01:00"
+    "CreationDate": "2023-01-31T15:22:12+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "chubby-hat",
       "GUID": "63687562-6279-42d6-9861-742e6b696361",
-      "Revision": "0.2.0"
+      "Revision": "0.2.1"
     },
     "Size": {
       "X": 143.61,
