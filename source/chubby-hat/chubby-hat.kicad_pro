@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.19999999999999998
         }
       },
       "diff_pair_dimensions": [
@@ -398,8 +398,10 @@
         "nets": [
           "+3V3",
           "+5V",
+          "/RP2040/DVDD",
           "/RP2040/VREG_IN",
           "/RP2040/VREG_OUT",
+          "/Type C USB 2.0/VBUS_F1",
           "/Type C USB 2.0/VBUS_FB1",
           "VBUS",
           "VDD"
