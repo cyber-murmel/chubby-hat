@@ -68,6 +68,8 @@
         "clearance|137160000|120650000|c131c9c4-ef5b-46ba-b721-0534efa9b97a|836f65fc-a520-442a-93a4-a93c6ce84889",
         "clearance|137160000|121031000|c131c9c4-ef5b-46ba-b721-0534efa9b97a|54f47014-dbed-4ebf-9c8e-ff52b52488b4",
         "clearance|137160000|121031000|e34c99b1-9285-4573-8dd5-4fa9897c37cd|836f65fc-a520-442a-93a4-a93c6ce84889",
+        "courtyards_overlap|162617317|65076121|13ea112a-6e36-45ad-be85-3dc4aeb086fe|3177e00b-3a77-48ac-bdc3-d95cf13876ae",
+        "courtyards_overlap|164617317|65076121|13ea112a-6e36-45ad-be85-3dc4aeb086fe|7b183c63-ce09-4209-ad4b-879ec749ee6a",
         "courtyards_overlap|183249999|77700001|ef079ce1-2a5e-439e-bf54-4c8e1c11b321|f9dddb60-bed9-44f2-92fb-418ad457d9fa",
         "courtyards_overlap|185249999|81700001|00f35597-3d81-46b1-944e-eb3cbf53fc09|ef079ce1-2a5e-439e-bf54-4c8e1c11b321",
         "courtyards_overlap|187249999|85700001|00f35597-3d81-46b1-944e-eb3cbf53fc09|d255fde2-dbc6-4c5a-85a8-50115228e7c2"
@@ -398,6 +400,7 @@
         "nets": [
           "+3V3",
           "+5V",
+          "+5V_{module}",
           "/RP2040/DVDD",
           "/RP2040/VREG_IN",
           "/RP2040/VREG_OUT",
@@ -478,6 +481,14 @@
       "Type C USB 2.0"
     ],
     [
+      "e665c2ef-b449-4dc5-9bfe-324124961020",
+      "ZVD1"
+    ],
+    [
+      "fd50aec1-3d51-44db-a4cb-6c1b12df99e5",
+      "ZVD2"
+    ],
+    [
       "cd3f7ea5-63a4-40ca-a998-c2430d7cb59c",
       "Colorlight 5A-75B"
     ],
@@ -491,7 +502,7 @@
     "company": "",
     "pid": "",
     "repo": "github.com/cyber-murmel/chubby-hat",
-    "revision": "0.2.1",
+    "revision": "0.2.2",
     "title": "Chubby Hat"
   }
 }

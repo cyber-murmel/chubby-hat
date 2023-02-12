@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "6.0.9"
     },
-    "CreationDate": "2023-02-12T02:37:51+01:00"
+    "CreationDate": "2023-01-31T22:29:56+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "chubby-hat",
-      "GUID": "63687562-6279-42d6-9861-742e6b696361",
-      "Revision": "0.2.2"
+      "Name": "hc245t-bypass-esd-panel",
+      "GUID": "68633234-3574-42d6-9279-706173732d65",
+      "Revision": "${revision}"
     },
     "Size": {
-      "X": 143.61,
-      "Y": 91.54
+      "X": 50.05,
+      "Y": 30.05
     },
     "LayerNumber": 2,
     "BoardThickness": 1.6,
@@ -24,57 +24,55 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.16,
-      "PadToTrack": 0.16,
-      "TrackToTrack": 0.16,
-      "MinLineWidth": 0.16,
-      "TrackToRegion": 0.2,
-      "RegionToRegion": 0.2
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.25
     }
   ],
   "FilesAttributes": [
     {
-      "Path": "chubby-hat-F_Cu.gbr",
+      "Path": "hc245t-bypass-esd-panel-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chubby-hat-B_Cu.gbr",
+      "Path": "hc245t-bypass-esd-panel-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chubby-hat-F_Paste.gbr",
+      "Path": "hc245t-bypass-esd-panel-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chubby-hat-B_Paste.gbr",
+      "Path": "hc245t-bypass-esd-panel-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chubby-hat-F_Silkscreen.gbr",
+      "Path": "hc245t-bypass-esd-panel-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chubby-hat-B_Silkscreen.gbr",
+      "Path": "hc245t-bypass-esd-panel-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "chubby-hat-F_Mask.gbr",
+      "Path": "hc245t-bypass-esd-panel-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "chubby-hat-B_Mask.gbr",
+      "Path": "hc245t-bypass-esd-panel-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "chubby-hat-Edge_Cuts.gbr",
+      "Path": "hc245t-bypass-esd-panel-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
@@ -90,7 +88,6 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Green",
       "Thickness": 0.01,
       "Name": "Top Solder Mask"
     },
@@ -113,7 +110,6 @@
     },
     {
       "Type": "SolderMask",
-      "Color": "Green",
       "Thickness": 0.01,
       "Name": "Bottom Solder Mask"
     },
