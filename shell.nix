@@ -1,9 +1,9 @@
 { pkgs ? import
     (builtins.fetchGit {
-      name = "nixos-22.11-2023_01_05";
+      name = "nixos-unstable-2023_02_25";
       url = "https://github.com/nixos/nixpkgs/";
-      ref = "refs/heads/nixos-22.11";
-      rev = "a9eedea7232f5d00f0aca7267efb69a54da1b8a1";
+      ref = "refs/heads/nixos-unstable";
+      rev = "988cc958c57ce4350ec248d2d53087777f9e1949";
     })
     { }
 }:
@@ -12,7 +12,7 @@ with pkgs;
 
 mkShell {
   buildInputs = [
-    kicad # 6.0.9
+    kicad # 7.0.0
     zip
   ];
 }
