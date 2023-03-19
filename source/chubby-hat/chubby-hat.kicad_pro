@@ -70,10 +70,7 @@
         "clearance|137160000|121031000|c131c9c4-ef5b-46ba-b721-0534efa9b97a|54f47014-dbed-4ebf-9c8e-ff52b52488b4",
         "clearance|137160000|121031000|e34c99b1-9285-4573-8dd5-4fa9897c37cd|836f65fc-a520-442a-93a4-a93c6ce84889",
         "courtyards_overlap|162617317|65076121|13ea112a-6e36-45ad-be85-3dc4aeb086fe|3177e00b-3a77-48ac-bdc3-d95cf13876ae",
-        "courtyards_overlap|164617317|65076121|13ea112a-6e36-45ad-be85-3dc4aeb086fe|7b183c63-ce09-4209-ad4b-879ec749ee6a",
-        "courtyards_overlap|183249999|77700001|ef079ce1-2a5e-439e-bf54-4c8e1c11b321|f9dddb60-bed9-44f2-92fb-418ad457d9fa",
-        "courtyards_overlap|185249999|81700001|00f35597-3d81-46b1-944e-eb3cbf53fc09|ef079ce1-2a5e-439e-bf54-4c8e1c11b321",
-        "courtyards_overlap|187249999|85700001|00f35597-3d81-46b1-944e-eb3cbf53fc09|d255fde2-dbc6-4c5a-85a8-50115228e7c2"
+        "courtyards_overlap|164617317|65076121|13ea112a-6e36-45ad-be85-3dc4aeb086fe|7b183c63-ce09-4209-ad4b-879ec749ee6a"
       ],
       "meta": {
         "version": 2
