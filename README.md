@@ -26,15 +26,13 @@ Read more on [<img src="https://hackaday.io/favicon.ico" width="12em"> hackaday.
 
 - USB to JTAG via extra dev board or on-board RP2040
 - three 2x Pmod ports
-  
+
 <img src="exports/renderings/chubby-hat_top.png" width="75%">
 <img src="exports/renderings/chubby-hat_bottom.png" width="75%">
 
 ## KiCad Version
 ```
-Application: kicad-cli x86_64 on x86_64
-
-Version: 7.0.0, release build
+Version: 7.0.1, release build
 
 Libraries:
 	wxWidgets 3.2.2
