@@ -20,6 +20,7 @@ endif
 KICAD_CLI ?= kicad-cli
 PDFUNITE ?= pdfunite
 PCB_HELPER ?= ./scripts/pcb_helper.py
+OPENSCAD ?= openscad
 
 PLOTS=$(addprefix exports/plots/, $(PROJECTS))
 PLOTS_SCH=$(addsuffix -sch.pdf, $(PLOTS))
@@ -84,6 +85,41 @@ production/gbr/%.zip: source/*/%.kicad_pcb
 		--output "production/gbr/$*/"
 
 	$(Q)zip $@ production/gbr/$*/*
+
+
+# special targets to make pattern
+PATTERN=$(addprefix assets/art/, $(addsuffix -pattern.svg, chubby-hat))
+
+pattern: $(PATTERN)
+.PNONY: pattern
+
+assets/art/chubby-hat-pattern.svg: source/chubby-hat/chubby-hat.kicad_pcb scripts/pattern.scad
+	$(Q)$(eval tempdir := $(shell mktemp -d))
+
+	$(Q)$(KICAD_CLI) pcb export svg \
+		--exclude-drawing-sheet \
+		--page-size-mode 2 \
+		--layers "F.Mask,F.SilkS" \
+		"$<" \
+		--output "$(tempdir)/$*-mask.svg"
+	@echo
+	$(Q)$(KICAD_CLI) pcb export svg \
+		--exclude-drawing-sheet \
+		--page-size-mode 2 \
+		--layers "User.6" \
+		"$<" \
+		--output "$(tempdir)/$*-edge.svg"
+	@echo
+
+	$(Q)$(OPENSCAD) scripts/pattern.scad \
+		-D size=3 \
+		-D margin=2 \
+		-D 'edge="$(tempdir)/$*-edge.svg"' \
+		-D 'mask="$(tempdir)/$*-mask.svg"' \
+		-o $@
+	$(Q)sed --expression 's/stroke\S*="\S*"//g' --in-place $@
+
+	$(Q)rm -r $(tempdir)
 
 
 clean:
