@@ -2,36 +2,6 @@
 
 set -euo pipefail
 
-# plot_pcb () {
-# 	tempdir=$(mktemp -d)
-
-# 	kicad-cli pcb export pdf \
-# 		--include-border-title \
-# 		--layers "F.Cu,Edge.Cuts" \
-# 		"source/$1/$1.kicad_pcb" \
-# 		--output "$tempdir/$1-top.pdf"
-
-# 	kicad-cli pcb export pdf \
-# 		--include-border-title \
-# 		--layers "B.Cu,Edge.Cuts" \
-# 		"source/$1/$1.kicad_pcb" \
-# 		--output "$tempdir/$1-bottom.pdf"
-
-# 	pdfunite "$tempdir/$1-top.pdf" "$tempdir/$1-bottom.pdf" "exports/plots/$1-pcb.pdf" 2>/dev/null
-
-# 	git add "exports/plots/$1-pcb.pdf"
-
-# 	rm -r $tempdir
-# }
-
-# plot_sch () {
-# 	kicad-cli sch export pdf \
-# 		"source/$1/$1.kicad_sch" \
-# 		--output "exports/plots/$1-sch.pdf"
-
-# 	git add "exports/plots/$1-sch.pdf"
-# }
-
 files_added=`git diff --cached --name-status`
 project_paths=`find source -mindepth 1 -maxdepth 1 -type d`
 
@@ -44,7 +14,8 @@ while read -r project_path; do
 		make "exports/plots/$project_name-pcb.pdf"
 		make "production/gbr/$project_name.zip"
 		git add "exports/plots/$project_name-pcb.pdf"
-		git add "production/gbr/$project_name"
+		# the directory containing the Gerbers is a side effect of the zip creation
+		git add "production/gbr/$project_name/"
 	fi
 
 	re="$project_path.*\.kicad_sch"

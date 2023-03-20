@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "kicad-template"
+version = "0.1.0"
+description = ""
+authors = ["marble <git@computer-in.love>"]
+readme = "README.md"
+packages = [{include = "kicad_template"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sexpdata = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

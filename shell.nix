@@ -33,6 +33,8 @@ mkShell {
     kicad-7_0_1
     zip
     poppler_utils
+    (python3.withPackages(ps: with ps; [
+      sexpdata
+    ]))
   ];
 }
-

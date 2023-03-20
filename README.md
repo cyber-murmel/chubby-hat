@@ -39,6 +39,9 @@ well as PCB art pattern creation.
 ### Requirements
 Apart from [KiCad 7](#kicad-version) this requires some additional software.
 
+The Makefile calls a Python script that makes use of [sexptdata](https://pypi.org/project/sexpdata/) to parse KiCad files.
+Install [Poetry](https://python-poetry.org/) and run `poetry shell` followed by `poetry install` in the root of this repositoryto set up a virtual environment with the required package(s). To re-enter this environment, simply run `poetry shell` in the root of this repository.
+
 For PDF export you need to install [Poppler](https://poppler.freedesktop.org/).
 Gerber export requires [zip](https://infozip.sourceforge.net/).
 Pattern creation is implemented with [OpenSCAD](https://openscad.org/).
@@ -68,7 +71,7 @@ Add the new pattern graphic to the board.
 The [hooks](hooks) directory contains client-side [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks).
 Currently only the pre-commit hook is used to automatically export plots.
 
-To enable the hooks for your local repository, `cd` into it and run.
+To enable the hooks locally, run the following in the root of the repository.
 ```shell
 git config core.hooksPath ./hooks
 ```
