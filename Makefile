@@ -48,16 +48,21 @@ exports/plots/%-pcb.pdf: source/*/%.kicad_pcb
 		copper \
 	))
 
-	$(Q)for layer in $(copper); \
-	do \
+	$(Q)rm -f $@
+
+	$(Q)for layer in $(copper); do \
 		$(KICAD_CLI) pcb export pdf \
 			--include-border-title \
 			--layers "$$layer,Edge.Cuts" \
 			"$<" \
 			--output "$(tempdir)/$*-$$layer.pdf"; \
+		if [ -f "$@" ]; then \
+			cp "$@" "$(tempdir)/$*.pdf"; \
+			$(PDFUNITE) "$(tempdir)/$*.pdf" "$(tempdir)/$*-$$layer.pdf" "$@" 2>/dev/null; \
+		else \
+			mv "$(tempdir)/$*-$$layer.pdf" "$@"; \
+		fi \
 	done
-
-	$(Q)$(PDFUNITE) $(tempdir)/$*-*.pdf "$@" 2>/dev/null
 
 	$(Q)rm -r $(tempdir)
 
