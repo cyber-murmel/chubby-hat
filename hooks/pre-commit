@@ -5,10 +5,12 @@ set -euo pipefail
 files_added=`git diff --cached --name-status`
 project_paths=`find source -mindepth 1 -maxdepth 1 -type d`
 
+echo $files_added
+
 while read -r project_path; do
 	project_name=`echo $project_path | sed -e 's/^source\///g'`
 
-	re="$project_path.*\.kicad_pcb"
+	re="$project_path/\S*\.kicad_pcb"
 	if [[ $files_added =~ $re ]]
 	then
 		make "exports/plots/$project_name-pcb.pdf"
@@ -18,7 +20,8 @@ while read -r project_path; do
 		git add "production/gbr/$project_name/"
 	fi
 
-	re="$project_path.*\.kicad_sch"
+	re="$project_path/\S*\.kicad_sch"
+	echo $re
 	if [[ $files_added =~ $re ]]
 	then
 		make "exports/plots/$project_name-sch.pdf"
